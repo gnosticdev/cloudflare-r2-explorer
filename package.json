@@ -1,0 +1,26 @@
+{
+	"author": {
+		"name": "gnosticdev"
+	},
+	"dependencies": {
+		"@cloudflare/workers-types": "^4.20231218.0",
+		"@hono/valibot-validator": "^0.2.1",
+		"hono": "^3.12.0",
+		"valibot": "^0.25.0"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "^1.5.0",
+		"wrangler": "^3.22.3"
+	},
+	"main": "dist/index.js",
+	"name": "cloudflare-r2-explorer",
+	"private": true,
+	"scripts": {
+		"build": "bun build src/index.tsx --outfile dist/index.js",
+		"dev": "wrangler dev --env dev --live-reload --port 3000",
+		"dev:remote": "wrangler dev --env dev --port 3000 --remote",
+		"lint": "biome lint --apply",
+		"preview": "wrangler preview --watch"
+	},
+	"version": "0.0.1"
+}

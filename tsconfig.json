@@ -1,0 +1,21 @@
+{
+	"compilerOptions": {
+		"noEmit": true,
+		"jsx": "react-jsx",
+		"jsxImportSource": "hono/jsx",
+		"module": "ESNext",
+		"moduleResolution": "Bundler",
+		"target": "ESNext",
+		"lib": ["ESNext"],
+		"allowArbitraryExtensions": false,
+		"types": ["@cloudflare/workers-types"],
+		"esModuleInterop": true,
+		"verbatimModuleSyntax": true,
+		"baseUrl": "./",
+		"paths": {
+			"@/*": ["./src/*"]
+		}
+	},
+	"include": ["./**/*.ts", "./**/*.tsx"],
+	"exclude": ["node_modules"]
+}

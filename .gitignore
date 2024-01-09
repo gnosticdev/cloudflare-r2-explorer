@@ -1,0 +1,39 @@
+# Dependency directories
+node_modules
+
+# mac 
+.DS_Store
+
+# npm
+*-lock.*
+*.lock
+*.log
+
+# media
+assets
+
+# cloudflare
+.dev.vars
+.denoflare
+wrangler.toml
+
+# TypeScript cache
+*.tsbuildinfo
+
+# build outputs
+.next
+out
+dist
+.astro
+.wrangler
+
+# environment vars
+*.env*
+!.env.example
+
+# Cursor related files
+.vscode-test
+.vscode/tasks.json
+
+# Bun
+bun.lockb

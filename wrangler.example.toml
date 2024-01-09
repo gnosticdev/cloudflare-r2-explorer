@@ -1,0 +1,21 @@
+#: schema https://github.com/cloudflare/workers-sdk/files/12887590/wrangler.schema.json
+name = "example-worker"
+main = "src/index.tsx"
+compatibility_date = "2023-07-17"
+
+# Uses the workers.dev domain to test and deploy. Uncomment this to use a custom domain
+# workers_dev = true
+
+# Production environment
+[env.prod]
+[[env.prod.r2_buckets]]
+binding = "BUCKET_NAME" # This is the variable used in our code to access the bucket name
+bucket_name = "my-bucket-name" # The name of the bucket you will use in production
+
+# Development environment
+[env.dev]
+[[env.dev.r2_buckets]]
+binding = "BUCKET_NAME" # use the same as production to avoid changing code
+bucket_name = "my-bucket-name" # Used when running wrangler dev --remote
+preview_bucket_name = "preview-my-bucket-name" # Used when running wrangler dev (runs locally)
+
